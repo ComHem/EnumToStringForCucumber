@@ -12,7 +12,7 @@ This field can be used in any annotation (but intended for Cucumber annotations)
 
 ### Maven
 Specify dependency in pom:
-```
+```xml
         <dependency>
             <groupId>se.comhem.cucumber.annotations</groupId>
             <artifactId>EnumToStringForCucumber</artifactId>
@@ -31,7 +31,7 @@ You can now have *compile time validation* in you Cucumber feature file, assurin
 
 ### Example
 If you have an annotated enum class
-```
+```java
 @GenerateCucumberString
 public enum Services {
     IP_TV_MED,
@@ -43,20 +43,19 @@ public enum Services {
 ```
 
 The annotation will generate the class
-```
+```java
 public class ServicesToCucumberString {
 	public static final String value = "(IP TV MED|IP TV PLUS|IP TV BAS|IP TV MAX|TIVO TV)";
 }
 ```
 
 Use it in your the `@Given @When @Then` annotations of you step definition files:
-```
+```java
 @Then("the customer is authorized to access the " + ServicesToCucumberString.value +  " package")
 public void the_customer_is_authorized_to_access_package(String packageName) throws Throwable {
     verifyAuthForPackage(packageName);
 }
 ```
 Your feature file will basically be validated against the enum values:
-
     <span style="color: blue">Given</span> a customer
     <span style="color: blue">When</span> an agreement for the <span style="color: dodgerblue">IP TV MAX</span> package is created and an order is placed
