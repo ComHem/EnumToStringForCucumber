@@ -57,7 +57,6 @@ public void the_customer_is_authorized_to_access_package(String packageName) thr
 }
 ```
 Your feature file will basically be validated against the enum values:
-```html
-    <span style="color: blue">Given</span> a customer
-    <span style="color: blue">When</span> an agreement for the <span style="color: dodgerblue">IP TV MAX</span> package is created and an order is placed
-```
+
+**Given** a customer
+**When** an agreement for the *IP TV MAX* package is created and an order is placed
