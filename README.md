@@ -2,7 +2,7 @@ EnumToStringForCucumber
 =======================
 Use enum classes to validate some values in your Cucumber specifications!
 
-Processes an enum class annotated with @GenerateCucumberString, producing a new java source file which is also compiled.
+Processes an enum class annotated with `@GenerateCucumberString`, producing a new java source file which is also compiled.
 The generated class has a static String field, which is the concatenation of the enum values, with delimiter, suffix and prefix as specified in the annotation.
 These parameters (delimiter, suffix...) can be overridden.
 This field can be used in any annotation (but intended for Cucumber annotations), as it's a compile time constant value.
@@ -57,5 +57,7 @@ public void the_customer_is_authorized_to_access_package(String packageName) thr
 }
 ```
 Your feature file will basically be validated against the enum values:
+```html
     <span style="color: blue">Given</span> a customer
     <span style="color: blue">When</span> an agreement for the <span style="color: dodgerblue">IP TV MAX</span> package is created and an order is placed
+```
