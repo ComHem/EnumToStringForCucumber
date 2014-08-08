@@ -59,4 +59,5 @@ public void the_customer_is_authorized_to_access_package(String packageName) thr
 Your feature file will basically be validated against the enum values:
 
 **Given** a customer
+
 **When** an agreement for the *IP TV MAX* package is created and an order is placed
