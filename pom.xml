@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>se.comhem.cucumber.annotations</groupId>
+    <artifactId>EnumToStringForCucumber</artifactId>
+    <version>1.0</version>
+    <description>
+        Processes an enum class annotated with @GenerateCucumberString, producing a new java source file which is also compiled.
+        The generated class has a static String field, which is the concatenation of the enum values, with delimiter, suffix and prefix as specified in the annotation.
+        These parameters (delimiter, suffix...) can be overridden.
+        This field can be used in any annotation (but most useful in Cucumber annotations), as it's a compile time constant value.
+    </description>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>17.0</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+
+                <configuration>
+                    <compilerArgument>-proc:none</compilerArgument>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
