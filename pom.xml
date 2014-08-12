@@ -4,7 +4,7 @@
 
     <groupId>se.comhem.cucumber.annotations</groupId>
     <artifactId>EnumToStringForCucumber</artifactId>
-    <version>1.0</version>
+    <version>1.3</version>
     <description>
         Processes an enum class annotated with @GenerateCucumberString, producing a new java source file which is also compiled.
         The generated class has a static String field, which is the concatenation of the enum values, with delimiter, suffix and prefix as specified in the annotation.
