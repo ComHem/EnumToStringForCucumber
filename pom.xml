@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>9</version>
+    </parent>
 
     <groupId>se.comhem.cucumber.annotations</groupId>
     <artifactId>EnumToStringForCucumber</artifactId>
     <version>1.3</version>
+
+    <name>Enum to string for Cucumber</name>
     <description>
-        Processes an enum class annotated with @GenerateCucumberString, producing a new java source file which is also compiled.
-        The generated class has a static String field, which is the concatenation of the enum values, with delimiter, suffix and prefix as specified in the annotation.
+        Processes an enum class annotated with @GenerateCucumberString, producing a new java source file which is also
+        compiled.
+        The generated class has a static String field, which is the concatenation of the enum values, with delimiter,
+        suffix and prefix as specified in the annotation.
         These parameters (delimiter, suffix...) can be overridden.
-        This field can be used in any annotation (but most useful in Cucumber annotations), as it's a compile time constant value.
+        This field can be used in any annotation (but most useful in Cucumber annotations), as it's a compile time
+        constant value.
     </description>
+
+    <url>https://github.com/ComHem/EnumToStringForCucumber</url>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git@github.com:ComHem/EnumToStringForCucumber.git</connection>
+        <developerConnection>scm:git:git@github.com:ComHem/EnumToStringForCucumber.git</developerConnection>
+        <url>https://github.com/ComHem/EnumToStringForCucumber</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>Gabriel Klappenbach</name>
+            <email>gabriel.klappenbach@comhem.com</email>
+            <organization>Com Hem</organization>
+            <organizationUrl>http://www.comhem.com</organizationUrl>
+        </developer>
+    </developers>
 
     <dependencies>
 
@@ -21,6 +57,9 @@
         </dependency>
 
     </dependencies>
+
+
+
 
     <build>
         <plugins>
